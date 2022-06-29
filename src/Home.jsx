@@ -8,7 +8,7 @@ import Support from "./Support";
 const Home = () => {
     return ( 
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <Featured />
             <Products1 />
             <Products2 />

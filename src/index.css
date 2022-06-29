@@ -26,26 +26,31 @@ code {
 }
 
 #Navbar {
-  height: 4rem;
+  height: 5rem;
+  padding-top: .1px;
   font-weight: 500;
-  background-color: rgb(109, 40, 40);
+  background: rgb(109, 40, 40);
   font-size: 1.4rem;
 }
 
 #NavbarImg {
   height: 3rem;
-  margin-top: .5rem;
+  margin-top: 2rem;
 }
 
 #Navbar ul {
-  padding: 1rem;
   font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin-top: .1rem;
 }
 
 #Navbar ul li {
-  display: inline;
+  /* display: inline; */
   color: white;
   padding: 2rem;
+
 }
 
 #featuredImage {
@@ -84,12 +89,17 @@ code {
   gap: 1rem;
   font-size: 3rem;
   justify-content: center;
+
 }
+
+
 
 .productsContainer div {
   background-color: rgb(88, 39, 39);
   height: 20rem;
   /* width: 40rem; */
+  cursor: pointer;
+  box-shadow: 0 5px 10px 0 black;
 }
 
 .productsContainer img {
@@ -112,10 +122,24 @@ code {
   margin-top: 5.3rem;
   margin-left: 3rem;
   text-align: left;
-  width: 30rem;
+  width: max-content;
   background-color: rgba(37, 37, 37, 0.555);
   color: rgb(189, 192, 186);
   font-size: .5em;
+  transition: all .3s ease;
+
+}
+
+.productsContainer div:active {
+  
+}
+
+.productsContainer div:hover .productsText {
+  /* transform: scale(1.1); */
+  margin-left: 7rem;
+  transition: all .5s ease;
+  
+
 }
 
 .spanTwo {
@@ -171,9 +195,6 @@ code {
   padding-top: 2em;
   font-weight: 500;
   padding-left: 2rem;
-
-
-
 }
 
 .products2Title {
@@ -182,15 +203,56 @@ code {
   padding-left: 1rem;
 }
 
+.productsViewContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.productsViewContainer button {
+  width: 10rem;
+  height: 5rem;
+  outline: 5px solid green;
+  margin-top: 30rem;
+}
+
+#productsViewTitle {
+  display: inline-block;
+}
+
+.productsViewContent {
+  display: flex;
+  justify-content: center;
+}
+
+
+.productsViewContent p {
+  padding-left: 2rem;
+  outline: 5px solid purple;
+}
+
+.productsViewContainer img {
+  width: 40rem;
+  height: 40rem;
+}
+
+.productsDisplay {
+  background-color: rgba(255, 0, 0, 0.315);
+  height: 40rem;
+  width: 40rem;
+}
+
 #img-one {
   filter: hue-rotate(50deg);
 }
+
 #img-two {
   filter: hue-rotate(90deg);
 }
+
 #img-three {
   filter: hue-rotate(140deg);
 }
+
 
 .footer {
   display: flex;
@@ -203,6 +265,9 @@ code {
 }
 
 @media (max-width: 700px) {
+
+  #Navbar {
+  }
 
   .productsContainer {
     grid-template-columns: repeat(1, 20rem);
@@ -217,5 +282,19 @@ code {
   .spanTwo {
     grid-column: span 1;
 
+  }
+
+  #Navbar ul {
+    display: none;
+  }
+
+  .productsTitle {
+    width: 15rem;
+  }
+
+  .productsText {
+    width: 10rem;
+    margin-top: 10rem;
+    margin-left: 1px;
   }
 }

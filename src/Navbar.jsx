@@ -8,13 +8,14 @@ const Navbar = (props) => {
 
     return (
         <div id="Navbar">
-            <img src={props.imgUrl} id="NavbarImg" alt="" />
+            {/* <img src={props.imgUrl} id="NavbarImg" alt="" /> */}
             <ul>
                 {listItems.map((elem) => 
                     <li key={elem}>{elem}</li> 
                 )}
-            <li><Link to="/">Page One</Link></li>
-            <li><Link to="/two">Page Two</Link></li>
+                <Link to="/"><li>Page One</li></Link>
+                <Link to="/two"><li>Page Two</li></Link>
+                <Link to="/products"><li>Products</li></Link>
             </ul>
         </div>
     )
