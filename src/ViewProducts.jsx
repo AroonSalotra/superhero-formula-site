@@ -1,13 +1,41 @@
-const ViewProducts = () => {
+import { Link } from "react-router-dom"
+import { useState, useEffect } from "react"
+
+const ViewProducts = ({ index, PRODUCTS, IMAGES }) => {
+
+    console.log(index.index)
+
+    const ProductText = [
+        // null,
+        "Tired of high fuel prices? Then the Super-Speed v4 is the one for you!",
+        "Now you can open that pickle jar, punch that bully and impress the mirror",
+        "Turn your loser kid into a straight A student",
+        "The perfect formula for soldiers, now you can commit war crimes while saving on all those ammo costs",
+        "Please don't use this for arson"
+    ]
+
+    const myProducts = PRODUCTS[index.index]
+
+
+
+    if (index.index == undefined) {
+        return <Link to="/">
+            <h1>Error - Press to redirect</h1>
+        </Link>
+    }
+
     return (
-        <div className="productsViewContainer">
-            <h1 id="productsViewTitle">This is Products View</h1>
+        <div className="productsViewContainer" >
+            <h1 id="productsViewTitle">{myProducts.title}</h1>
             <div className="productsViewContent">
-                <img src="https://via.placeholder.com/1024x512?text=Product" alt="" />
+                {IMAGES[index.index]}
                 <div id="productsViewText">
-                    <p>texttexttexttexttexttexttexttexttexttexttext </p>
-                    <button>Apply Now</button>
+                    <p>
+                        {/* Placeholder Text */}
+                        {ProductText[index.index]}
+                    </p>
                 </div>
+                <button>Apply For Testing Now</button>
             </div>
         </div>
     );
