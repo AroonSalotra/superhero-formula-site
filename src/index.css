@@ -8,8 +8,8 @@
   --gra-b: linear-gradient(to right, #414346, #242525);
 
   --fonts: apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 * {
@@ -364,18 +364,19 @@ textarea {
   padding-left: 20px;
   border: 2px solid black;
   box-shadow: 0 2px 5px 0 black;
+  cursor: pointer;
 }
 
 .supportContainer h2 {
-
+  font-size: 2rem;
 }
 
 .supportContainer h3 {
-
+  font-size: 1rem;
 }
 
 .supportContainer p {
-  
+  font-size: 1rem;
 }
 
 #supportSubmit {
@@ -424,6 +425,8 @@ textarea {
   opacity: 0;
 }
 
+#activate {
+}
 
 @media (max-width: 700px) {
 
