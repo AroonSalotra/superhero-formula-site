@@ -21,7 +21,6 @@ const Products2 = () => {
                 <div key={title} id={id} >
                     <h2 className={classTitle}>{title}</h2>
                     <h3 className={classText}>{text}</h3>
-                    {/* {IMAGES} */}
                     <img src={img} alt="" key={id}/>
                 </div>
             )}

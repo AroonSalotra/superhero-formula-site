@@ -6,8 +6,8 @@ import Featured from './Featured';
 import Products1 from './Products-1';
 import Products2 from './Products-2';
 import CompanyBanner from './CompanyBanner';
-import Support from './Support';
 import Footer from './Footer';
+import Support from './Support/Support';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState } from 'react';
@@ -30,13 +30,11 @@ const App = () => {
       alt="Firestarter" />,
     <img src="https://images.unsplash.com/photo-1635166304271-04931640a450?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
       alt="Featured" />,
-    <img src="https://images.pexels.com/photos/2091316/pexels-photo-2091316.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-      alt="Plane" />,
   ]
 
   const PRODUCTS = [
     // { title: "Featured Products", text: "Browse our wide range", imgUrl: IMAGES[0], classType: "spanTwo", index: 0 },
-    { title: "Super-Speed v4", text: "No car? no problem!", imgUrl: IMAGES[0], index: 0 },
+    { title: "Super-Speed v4", text: "", imgUrl: IMAGES[0], index: 0 },
     { title: "Fibre-Grower Alpha 1", text: "", imgUrl: IMAGES[1], index: 1 },
     { title: "Bob's Brain Capacity", text: "", imgUrl: IMAGES[2], index: 2 },
     { title: "Haptic Reflexors", text: "", imgUrl: IMAGES[3], index: 3 },
@@ -46,7 +44,6 @@ const App = () => {
 
 
   return (
-
     <Router>
       <Navbar />
       <Switch>
@@ -55,7 +52,6 @@ const App = () => {
           <Products1 setIndex={setIndex} PRODUCTS={PRODUCTS} IMAGES={IMAGES} />
           <Products2 />
           <CompanyBanner />
-          {/* <Support/> */}
           <Footer />
         </Route>
       </Switch>
@@ -67,12 +63,18 @@ const App = () => {
       </Switch>
 
       <Switch>
+        <Route exact path="/support">
+          {/* <SupportForm /> */}
+          <Support/>
+        </Route>
+      </Switch>
+
+      <Switch>
         <Route exact path="/products">
           <ViewProducts index={index} PRODUCTS={PRODUCTS} IMAGES={IMAGES} />
         </Route>
       </Switch>
     </Router>
-
   );
 }
 

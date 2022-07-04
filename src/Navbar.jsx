@@ -7,8 +7,19 @@ const Navbar = (props) => {
 
 
     const listItems = [
-        "Company", "TOS", "Liability", "App", "Support"
+        "Home", "Company", "TOS", "Liability", "App", "Support"
     ]
+
+    const test = [
+        { text: "Home", page: "/", id: 1 },
+        { text: "Company", id: 2 },
+        { text: "TOS", page: "/two", id: 3 },
+        { text: "Liability", id: 4 },
+        { text: "Support", page: "/support", id: 5 }
+    ]
+
+    test.push({text: "Testing", id: "Testing", page: "/products"})
+
 
     const handleClick = () => {
         if (display == "none") {
@@ -31,22 +42,27 @@ const Navbar = (props) => {
     return (
         <div id="Navbar">
             <div id="desktopNavbar">
-                <ul>
+                {/* <ul>
                     {listItems.map((elem) =>
                         <li key={elem}>{elem}</li>
                     )}
                     <Link to="/"><li>Page One</li></Link>
-                    <Link to="/two"><li>Page Two</li></Link>
                     <Link to="/products"><li>Products</li></Link>
+                </ul> */}
+
+                <ul>
+                    {test.map(({ text, page, id }) => (
+                        page ? <Link to={page} key={id}><li>{text}</li></Link> : <li key={id}>{text}</li>
+                    ))}
                 </ul>
             </div>
 
             <i className="mobileIcon fa-solid fa-bars" onClick={() => handleClick()}></i>
 
-            <div id="mobileNavbar" style={{ display: display  }}>
+            <div id="mobileNavbar" style={{ display: display }}>
                 <ul>
                     {listItems.map((elem) =>
-                        <li key={elem} style={{height: "1px"}}> {elem}</li>
+                        <li key={elem} style={{ height: "1px" }}> {elem}</li>
                     )}
                 </ul>
             </div>

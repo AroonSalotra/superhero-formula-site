@@ -37,6 +37,15 @@ const ViewProducts = ({ index, PRODUCTS, IMAGES }) => {
                 </div>
                 <button>Apply For Testing Now</button>
             </div>
+
+            <div className="productsViewSuggested">
+                <h2>Suggested Products</h2>
+                <div className="productsViewSuggestedImg">
+                <img src="https://via.placeholder.com/200x200?text=Image" alt="" />
+                <img src="https://via.placeholder.com/200x200?text=Image" alt="" />
+                <img src="https://via.placeholder.com/200x200?text=Image" alt="" />
+                </div>
+            </div>
         </div>
     );
 }
