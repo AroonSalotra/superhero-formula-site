@@ -19,8 +19,7 @@ const Products1 = ({ setIndex, PRODUCTS, IMAGES }) => {
             {PRODUCTS.map(({ title, text, imgUrl, classType, index }) => (
                 <Link to="/products" key={title} className={classType ? classType : null}>
                     <div className={classType ? classType : null} key={title}
-                        onClick={() => handleClick({ index })}
-                    >
+                        onClick={() => handleClick({ index })}>
                         <h2 className="productsTitle">{title}</h2>
                         <h3 className="productsText">{text}</h3>
                         {imgUrl}

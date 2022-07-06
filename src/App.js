@@ -1,5 +1,5 @@
 
-import PageTwo from './PageTwo';
+import Elibility from './Elibility';
 import Navbar from './Navbar';
 import ViewProducts from './ViewProducts';
 import Featured from './Featured';
@@ -8,6 +8,7 @@ import Products2 from './Products-2';
 import CompanyBanner from './CompanyBanner';
 import Footer from './Footer';
 import Support from './Support/Support';
+import Liability from './Liability';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { useState } from 'react';
@@ -16,6 +17,8 @@ import { useState } from 'react';
 const App = () => {
 
   const [index, setIndex] = useState(0)
+
+  const tempImg = <img src='https://via.placeholder.com/2048x2048?text=Placeholder'></img>
 
   const IMAGES = [
     <img src="https://images.pexels.com/photos/2280165/pexels-photo-2280165.jpeg?cs=srgb&dl=pexels-carl-newton-2280165.jpg&fm=jpg"
@@ -34,11 +37,11 @@ const App = () => {
 
   const PRODUCTS = [
     // { title: "Featured Products", text: "Browse our wide range", imgUrl: IMAGES[0], classType: "spanTwo", index: 0 },
-    { title: "Super-Speed v4", text: "", imgUrl: IMAGES[0], index: 0 },
-    { title: "Fibre-Grower Alpha 1", text: "", imgUrl: IMAGES[1], index: 1 },
-    { title: "Bob's Brain Capacity", text: "", imgUrl: IMAGES[2], index: 2 },
-    { title: "Haptic Reflexors", text: "", imgUrl: IMAGES[3], index: 3 },
-    { title: "Firestarter", text: "", imgUrl: IMAGES[4], classType: "spanTwo", index: 4 },
+    { title: "Super-Speed v4", text: "", imgUrl: tempImg, index: 0 },
+    { title: "Fibre-Grower Alpha 1", text: "", imgUrl: tempImg, index: 1 },
+    { title: "Bob's Brain Capacity", text: "", imgUrl: tempImg, index: 2 },
+    { title: "Haptic Reflexors", text: "", imgUrl: tempImg, index: 3 },
+    { title: "Firestarter", text: "", imgUrl: tempImg, classType: "spanTwo", index: 4 },
   ]
 
 
@@ -49,7 +52,7 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <Featured />
-          <Products1 setIndex={setIndex} PRODUCTS={PRODUCTS} IMAGES={IMAGES} />
+          <Products1 setIndex={setIndex} PRODUCTS={PRODUCTS} IMAGES={tempImg} />
           <Products2 />
           <CompanyBanner />
           <Footer />
@@ -57,21 +60,27 @@ const App = () => {
       </Switch>
 
       <Switch>
-        <Route exact path="/two">
-          <PageTwo />
+        <Route exact path="/elibility">
+          <Elibility />
+        </Route>
+      </Switch>
+
+      <Switch>
+        <Route exact path="/liability">
+          <Liability />
         </Route>
       </Switch>
 
       <Switch>
         <Route exact path="/support">
           {/* <SupportForm /> */}
-          <Support/>
+          <Support />
         </Route>
       </Switch>
 
       <Switch>
         <Route exact path="/products">
-          <ViewProducts index={index} PRODUCTS={PRODUCTS} IMAGES={IMAGES} />
+          <ViewProducts index={index} PRODUCTS={PRODUCTS} IMAGES={tempImg} />
         </Route>
       </Switch>
     </Router>

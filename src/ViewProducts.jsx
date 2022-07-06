@@ -3,7 +3,10 @@ import { useState, useEffect } from "react"
 
 const ViewProducts = ({ index, PRODUCTS, IMAGES }) => {
 
-    console.log(index.index)
+    // console.log(index.index)
+
+    const objectIndex = index.index;
+    console.log(objectIndex)
 
     const ProductText = [
         // null,
@@ -17,6 +20,27 @@ const ViewProducts = ({ index, PRODUCTS, IMAGES }) => {
     const myProducts = PRODUCTS[index.index]
 
 
+   
+    
+    let result = []
+    const myFunc = (target) => {
+    let loopAmount = 3;
+
+        for (let a = 0; a < loopAmount; a++) {
+            if (a == objectIndex) {
+                a++;
+                loopAmount++
+            } result.push(target[a])
+        } console.log(result)
+    }
+
+    
+
+
+
+
+
+
 
     if (index.index == undefined) {
         return <Link to="/">
@@ -28,7 +52,8 @@ const ViewProducts = ({ index, PRODUCTS, IMAGES }) => {
         <div className="productsViewContainer" >
             <h1 id="productsViewTitle">{myProducts.title}</h1>
             <div className="productsViewContent">
-                {IMAGES[index.index]}
+                {/* {IMAGES[index.index]} */}
+                {IMAGES}
                 <div id="productsViewText">
                     <p>
                         {/* Placeholder Text */}
@@ -36,15 +61,24 @@ const ViewProducts = ({ index, PRODUCTS, IMAGES }) => {
                     </p>
                 </div>
                 <button>Apply For Testing Now</button>
+
             </div>
 
             <div className="productsViewSuggested">
-                <h2>Suggested Products</h2>
+
+                <h2>Other Services</h2>
                 <div className="productsViewSuggestedImg">
-                <img src="https://via.placeholder.com/200x200?text=Image" alt="" />
-                <img src="https://via.placeholder.com/200x200?text=Image" alt="" />
-                <img src="https://via.placeholder.com/200x200?text=Image" alt="" />
-                </div>
+                {myFunc(PRODUCTS)}
+                    {result.map(({title, imgUrl, index}) => (
+                        <div>
+                        <h3>{title}</h3>
+                        {imgUrl}
+                        </div>
+                    ))}
+                    {/* <img src="https://via.placeholder.com/200x200?text=Image" alt="" />
+                    <img src="https://via.placeholder.com/200x200?text=Image" alt="" />
+                    <img src="https://via.placeholder.com/200x200?text=Image" alt="" /> */}
+                </div>            
             </div>
         </div>
     );
