@@ -17,7 +17,7 @@ const Navbar = (props) => {
         { text: "Elibility", page: "/elibility", id: 3 },
     ]
 
-    test.push({ text: "Mobile App", page: "/mobileApp", id: 6 })
+    // test.push({ text: "Mobile App", page: "/mobileApp", id: 6 })
     test.push({ text: "Testing", id: 2, page: "/products" })
 
 
