@@ -35,13 +35,21 @@ const App = () => {
       alt="Featured" />,
   ]
 
+  const IMAGES2 = [
+    <img src='https://images.unsplash.com/photo-1509099652299-30938b0aeb63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80'/>,
+    <img src='https://images.unsplash.com/photo-1606778303077-3780ea8d5420?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'/>,
+    <img src='https://images.unsplash.com/photo-1530973428-5bf2db2e4d71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'/>,
+    <img src='https://images.unsplash.com/photo-1619472351888-f844a0b33f5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80'/>,
+    <img src='https://images.unsplash.com/photo-1484788851447-16f19acb7e89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'/>,
+  ]
+
   const PRODUCTS = [
     // { title: "Featured Products", text: "Browse our wide range", imgUrl: IMAGES[0], classType: "spanTwo", index: 0 },
-    { title: "Super-Speed v4", text: "", imgUrl: tempImg, index: 0 },
-    { title: "Fibre-Grower Alpha 1", text: "", imgUrl: tempImg, index: 1 },
-    { title: "Bob's Brain Capacity", text: "", imgUrl: tempImg, index: 2 },
-    { title: "Haptic Reflexors", text: "", imgUrl: tempImg, index: 3 },
-    { title: "Firestarter", text: "", imgUrl: tempImg, classType: "spanTwo", index: 4 },
+    { title: "Super-Speed v4", text: "", imgUrl: IMAGES2[0], index: 0 },
+    { title: "Fibre-Grower Alpha 1", text: "", imgUrl: IMAGES2[1], index: 1 },
+    { title: "Bob's Brain Capacity", text: "", imgUrl: IMAGES2[2], index: 2 },
+    { title: "Haptic Reflexors", text: "", imgUrl: IMAGES2[3], index: 3 },
+    { title: "Firestarter", text: "", imgUrl: IMAGES2[4], classType: "spanTwo", index: 4 },
   ]
 
 

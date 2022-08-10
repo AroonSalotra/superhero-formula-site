@@ -85,7 +85,8 @@ textarea {
 
 #featuredImage img {
   position: absolute;
-  width: 100%;
+  width: 100vw;
+  height: 40rem;
   max-height: 30rem;
   left: 0;
   object-fit: cover;
@@ -95,7 +96,7 @@ textarea {
 #featuredText {
   color: rgb(255, 255, 255);
   padding-top: 1rem;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   /* background-color: rgba(39, 36, 36, 0.473); */
 }
 
@@ -111,7 +112,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(2, 40rem);
   /* grid-template-rows: minmax(5rem, auto); */
-  padding-top: 5rem;
+  padding-top: 10rem;
   gap: 1rem;
   font-size: 3rem;
   justify-content: center;
@@ -217,8 +218,6 @@ textarea {
 
 }
 
-
-
 #companyText {
   color: rgb(226, 226, 226);
   padding-top: 5rem;
@@ -228,7 +227,6 @@ textarea {
   padding-top: 2rem;
   gap: 10rem;
   user-select: none;
-
 }
 
 .products2Container img {
@@ -244,7 +242,9 @@ textarea {
   display: flex;
   justify-content: center;
   gap: 50px;
+}
 
+.products2Content div {
 }
 
 .products2Text {
@@ -304,7 +304,7 @@ textarea {
   transform: translateY(3rem);
 }
 
-.productsViewSuggested > h2 {
+.productsViewSuggested>h2 {
   transform: translateY(2rem);
 }
 
@@ -336,6 +336,18 @@ textarea {
 
 #img-three {
   filter: hue-rotate(140deg);
+}
+
+.width-m {
+  max-width: 40rem;
+  text-align: left;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .supportForm {
@@ -397,7 +409,7 @@ textarea {
 #footer {
   display: flex;
   justify-content: center;
-  gap: 20rem;
+  /* gap: 20rem; */
   transform: translateY(30rem);
   text-align: left;
   background: var(--gra-a);
@@ -429,20 +441,23 @@ textarea {
   opacity: 0;
 }
 
-#activate {
-}
+#activate {}
 
 @media (max-width: 700px) {
 
 
   .productsContainer {
-    grid-template-columns: repeat(1, 20rem);
+    /* grid-template-columns: repeat(1, 20rem); */
   }
 
   .products2Container {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+
+  .products2Container img {
+    width: 14rem;
   }
 
   .products2Content {
@@ -467,6 +482,7 @@ textarea {
     display: none;
   }
 
+
   .productsTitle {
     width: 15rem;
   }
@@ -481,11 +497,15 @@ textarea {
     display: flex;
   }
 
+  .spanTwo h1 {
+    word-wrap: break-word;
+  }
+
   .productsViewContainer {}
 
   .productsViewContent {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
 
   }
 
@@ -521,4 +541,25 @@ textarea {
     gap: 1px;
     padding-left: 5rem;
   }
+}
+
+@media (max-width: 1300px) {
+  .productsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products2Container {
+    /* display: flex; */
+  }
+
+  .products2Content {
+    flex-direction: column;
+  }
+
+  .products2Text, .products2Title {
+    position: relative;
+  }
+
+
 }

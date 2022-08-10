@@ -1,10 +1,10 @@
 const Elibility = () => {
     return (
-        <div>
+        <div className="formContainer">
             <h1>
                 Eligibility Form
             </h1>
-            <p>in order to ensure your safety, please fill out this mandatory
+            <p className="width-m">in order to ensure your safety, please fill out this mandatory
                 questionnaire (you will not be able to purchase our services without completion)
             </p>
 
@@ -13,7 +13,7 @@ const Elibility = () => {
                 <p>Specify your age</p>
 
                 <select name="" id="" defaultValue={"default"}>
-                    
+
                     <option value="default" disabled>Choose your age</option>
                     <option value="block">I am under 18</option>
                     <option value="allow">I am over 18</option>

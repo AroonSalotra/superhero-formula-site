@@ -3,7 +3,7 @@ import SupportBlock from "./SupportBlock";
 
 const Support = () => {
     return (<div>
-            <h1>Support Page</h1>
+        <h1>Support Page</h1>
         <div className="supportContainer">
             <SupportBlock title="Product" description="Contact [9am to 6pm]" link="[Phone Number]" />
             <SupportBlock title="Account" description="Contact [24/7]" link="[Phone Number]" />
