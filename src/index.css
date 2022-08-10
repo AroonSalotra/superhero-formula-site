@@ -244,8 +244,7 @@ textarea {
   gap: 50px;
 }
 
-.products2Content div {
-}
+.products2Content div {}
 
 .products2Text {
   position: absolute;
@@ -266,12 +265,17 @@ textarea {
 }
 
 .productsViewContainer button {
-  width: 10rem;
+  /* width: 10rem;
   height: 5rem;
-  /* margin-top: 30rem; */
   position: absolute;
   margin-top: 35rem;
-  margin-left: 45rem;
+  margin-left: 45rem; */
+
+  width: 10rem;
+  height: 5rem;
+  /* border: 3px solid red; */
+  /* position: absolute; */
+  /* transform: translate(41rem, 35rem); */
 }
 
 #productsViewTitle {
@@ -298,8 +302,14 @@ textarea {
 }
 
 #productsViewText {
-  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  /* width: 30rem; */
   text-align: left;
+}
+
+#productsViewText p {
+  height: fit-content;
 }
 
 .productsViewSuggested {
@@ -314,7 +324,7 @@ textarea {
   display: flex;
   justify-content: center;
   /* transform: translateY(5rem); */
-  gap: 50px;
+  /* gap: 50px; */
   /* border: 3px solid red; */
 }
 
@@ -508,31 +518,18 @@ textarea {
     word-wrap: break-word;
   }
 
-  .productsViewContainer {}
-
-  .productsViewContent {
-    /* display: flex;
-    flex-direction: column; */
-
-  }
-
-  #productsViewText {
-    /* border: 5px solid black; */
-    width: 20rem;
-
-  }
-
   .productsViewContent p {
-    padding-left: 3rem;
   }
 
-  .productsViewContent img {}
+  .productsViewSuggestedImg {}
 
-  .productsViewContainer button {
-    position: relative;
-    margin-top: auto;
-    margin-left: 6rem;
+  .productsViewSuggestedImg, div {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .productsViewSuggestedImg img {
+    /* max-width: 20rem; */
   }
 
   .productsViewContainer img {}
@@ -548,6 +545,26 @@ textarea {
     gap: 1px;
     padding-left: 5rem;
   }
+}
+
+@media (max-width: 1000px) {
+  #productsViewText {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .productsViewContainer {}
+
+  .productsViewContent {
+    flex-direction: column;
+  }
+
+  .productsViewContent p {
+    height: 5rem;
+    max-width: 25rem;
+  }
+
+  .productsViewContainer button {}
 }
 
 @media (max-width: 1300px) {
@@ -566,6 +583,14 @@ textarea {
 
   .products2Text, .products2Title {
     position: relative;
+  }
+
+  .productsViewSuggestedImg {
+    flex-direction: column;
+  }
+
+  .productsViewContent {
+    /* flex-direction: column; */
   }
 
 

@@ -56,8 +56,8 @@ const ViewProducts = ({ index, PRODUCTS, IMAGES, setIndex }) => {
                         {/* Placeholder Text */}
                         {ProductText[index.index]}
                     </p>
+                    <button>Apply For Testing Now</button>
                 </div>
-                <button>Apply For Testing Now</button>
             </div>
 
             <div className="productsViewSuggested">
