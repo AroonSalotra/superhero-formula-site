@@ -88,7 +88,7 @@ const App = () => {
 
       <Switch>
         <Route exact path="/products">
-          <ViewProducts index={index} PRODUCTS={PRODUCTS} IMAGES={tempImg} />
+          <ViewProducts index={index} setIndex={setIndex} PRODUCTS={PRODUCTS} IMAGES={IMAGES2} />
         </Route>
       </Switch>
     </Router>

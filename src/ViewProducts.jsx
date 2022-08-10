@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 
-const ViewProducts = ({ index, PRODUCTS, IMAGES }) => {
+const ViewProducts = ({ index, PRODUCTS, IMAGES, setIndex }) => {
 
     // console.log(index.index)
 
@@ -20,26 +20,19 @@ const ViewProducts = ({ index, PRODUCTS, IMAGES }) => {
     const myProducts = PRODUCTS[index.index]
 
 
-   
-    
+
+
     let result = []
     const myFunc = (target) => {
-    let loopAmount = 3;
+        let loopAmount = 3;
 
         for (let a = 0; a < loopAmount; a++) {
             if (a == objectIndex) {
                 a++;
                 loopAmount++
             } result.push(target[a])
-        } console.log(result)
+        } console.log("result", result)
     }
-
-    
-
-
-
-
-
 
 
     if (index.index == undefined) {
@@ -48,12 +41,16 @@ const ViewProducts = ({ index, PRODUCTS, IMAGES }) => {
         </Link>
     }
 
+    const handleClick = (value) => {
+        setIndex(value)
+    }
+
     return (
         <div className="productsViewContainer" >
             <h1 id="productsViewTitle">{myProducts.title}</h1>
             <div className="productsViewContent">
-                {/* {IMAGES[index.index]} */}
-                {IMAGES}
+                {IMAGES[index.index]}
+                {/* {IMAGES} */}
                 <div id="productsViewText">
                     <p>
                         {/* Placeholder Text */}
@@ -61,24 +58,23 @@ const ViewProducts = ({ index, PRODUCTS, IMAGES }) => {
                     </p>
                 </div>
                 <button>Apply For Testing Now</button>
-
             </div>
 
             <div className="productsViewSuggested">
-
                 <h2>Other Services</h2>
                 <div className="productsViewSuggestedImg">
-                {myFunc(PRODUCTS)}
-                    {result.map(({title, imgUrl, index}) => (
-                        <div>
-                        <h3>{title}</h3>
-                        {imgUrl}
+                    {myFunc(PRODUCTS)}
+                    {result.map(({ title, imgUrl, index }) => (
+                        <div
+                            onClick={() => handleClick({ index })}>
+                            <h3>{title}</h3>
+                            {imgUrl}
                         </div>
                     ))}
                     {/* <img src="https://via.placeholder.com/200x200?text=Image" alt="" />
                     <img src="https://via.placeholder.com/200x200?text=Image" alt="" />
                     <img src="https://via.placeholder.com/200x200?text=Image" alt="" /> */}
-                </div>            
+                </div>
             </div>
         </div>
     );
