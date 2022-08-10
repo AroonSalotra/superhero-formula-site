@@ -94,8 +94,13 @@ textarea {
 }
 
 #featuredText {
-  color: rgb(255, 255, 255);
+  color: rgb(221, 216, 216);
   padding-top: 1rem;
+  background: rgba(41, 40, 40, 0.815);
+  width: fit-content;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
   /* margin-top: 5rem; */
   /* background-color: rgba(39, 36, 36, 0.473); */
 }
@@ -189,7 +194,7 @@ textarea {
 #bannerImg {
   position: absolute;
   left: 0;
-  height: 300px;
+  height: 600px;
   object-fit: fill;
   width: 100vw;
   z-index: -1;
@@ -203,7 +208,6 @@ textarea {
   object-fit: scale-down;
   filter: hue-rotate(30deg);
   box-shadow: 5px 0 0 5px rgb(145, 14, 4); */
-
   height: 600px;
   box-shadow: 5px 0 0 5px rgb(94, 25, 20);
 }
@@ -215,7 +219,6 @@ textarea {
 
 #bannerText {
   padding-left: 5rem;
-
 }
 
 #companyText {
