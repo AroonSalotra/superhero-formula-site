@@ -372,10 +372,12 @@ textarea {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
-  margin: auto;
+  /* margin: auto; */
   /* width: 20rem; */
   gap: 20px;
+  /* display: none; */
 }
+
 
 #supportText {
   resize: none;
@@ -418,6 +420,7 @@ textarea {
 }
 
 #supportSelect, #supportEmail, #supportFile, #supportText {
+  /* width: auto; */
   width: 30rem;
   height: 2rem;
   border-radius: 5px;
@@ -499,7 +502,6 @@ textarea {
     display: none;
   }
 
-
   .productsTitle {
     width: 15rem;
   }
@@ -532,9 +534,23 @@ textarea {
     /* max-width: 20rem; */
   }
 
-  .productsViewContainer img {}
+  .supportContainer {
+    /* align-items: center; */
+  }
 
-  #bannerContainer {}
+  .supportContainer div {
+    width: auto;
+  }
+
+  .supportForm {
+    /* align-items: baseline; */
+  }
+  #supportSelect, #supportEmail, #supportFile, #supportText {
+    /* width: 30rem; */
+    width: auto;
+    height: 2rem;
+    border-radius: 5px;
+  }
 
   #bannerImg-2 {
     display: none;
@@ -544,6 +560,9 @@ textarea {
     flex-direction: column;
     gap: 1px;
     padding-left: 5rem;
+  }
+
+  .supportForm {
   }
 }
 
@@ -591,6 +610,10 @@ textarea {
 
   .productsViewContent {
     /* flex-direction: column; */
+  }
+
+  .supportContainer {
+    display: flex;
   }
 
 
