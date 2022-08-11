@@ -18,7 +18,7 @@ const Navbar = (props) => {
     ]
 
     // test.push({ text: "Mobile App", page: "/mobileApp", id: 6 })
-    test.push({ text: "Testing", id: 2, page: "/products" })
+    // test.push({ text: "Testing", id: 2, page: "/products" })
 
 
     const handleClick = () => {
