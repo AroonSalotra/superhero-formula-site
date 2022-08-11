@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/superhero-formula-site/support/static/css/main.d9ab302f.css",
-    "main.js": "/superhero-formula-site/support/static/js/main.608d2959.js",
-    "static/js/787.a1ea082e.chunk.js": "/superhero-formula-site/support/static/js/787.a1ea082e.chunk.js",
-    "index.html": "/superhero-formula-site/support/index.html",
-    "main.d9ab302f.css.map": "/superhero-formula-site/support/static/css/main.d9ab302f.css.map",
-    "main.608d2959.js.map": "/superhero-formula-site/support/static/js/main.608d2959.js.map",
-    "787.a1ea082e.chunk.js.map": "/superhero-formula-site/support/static/js/787.a1ea082e.chunk.js.map"
+    "main.css": "/superhero-formula-site/static/css/main.d9ab302f.css",
+    "main.js": "/superhero-formula-site/static/js/main.144bab59.js",
+    "static/js/787.a1ea082e.chunk.js": "/superhero-formula-site/static/js/787.a1ea082e.chunk.js",
+    "index.html": "/superhero-formula-site/index.html",
+    "main.d9ab302f.css.map": "/superhero-formula-site/static/css/main.d9ab302f.css.map",
+    "main.144bab59.js.map": "/superhero-formula-site/static/js/main.144bab59.js.map",
+    "787.a1ea082e.chunk.js.map": "/superhero-formula-site/static/js/787.a1ea082e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9ab302f.css",
-    "static/js/main.608d2959.js"
+    "static/js/main.144bab59.js"
   ]
 }
