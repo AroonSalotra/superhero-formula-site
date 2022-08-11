@@ -58,7 +58,7 @@ const App = () => {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/home">
           <Featured />
           <Products1 setIndex={setIndex} PRODUCTS={PRODUCTS} IMAGES={tempImg} />
           <Products2 />
