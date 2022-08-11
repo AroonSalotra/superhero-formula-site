@@ -11,7 +11,7 @@ const Navbar = (props) => {
     ]
 
     const test = [
-        { text: "Home", page: "/home", id: 1 },
+        { text: "Home", page: "/", id: 1 },
         // { text: "Liability", page: "/liability", id: 4 },
         { text: "Support", page: "/support", id: 5 },
         { text: "Elibility", page: "/elibility", id: 3 },
