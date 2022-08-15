@@ -43,7 +43,7 @@ const App = () => {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/home">
+        <Route exact path="/superhero-formula-site">
           <Featured />
           <Products1 setIndex={setIndex} PRODUCTS={PRODUCTS} IMAGES={tempImg} />
           <Products2 />

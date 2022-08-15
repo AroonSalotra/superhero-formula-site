@@ -52,12 +52,13 @@ textarea {
   padding-top: .1px;
   font-weight: 500;
   background: rgb(109, 40, 40);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 #desktopNavbar {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  word-break: break-all;
 }
 
 #NavbarImg {
@@ -66,17 +67,23 @@ textarea {
 }
 
 #Navbar ul {
-  font-weight: 500;
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  font-weight: 500;
+  /* display: flex;
+  flex-direction: row; */
+  /* justify-content: center; */
   list-style-type: none;
-  transform: translateY(-3rem);
+  transform: translateY(-1.5rem);
+
+  /* transform: translateY(-3rem); */
 }
 
 #Navbar ul li {
   /* display: inline; */
   color: white;
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 #featuredImage {
@@ -219,6 +226,8 @@ textarea {
 
 #bannerText {
   padding-left: 5rem;
+  /* max-width: 20rem; */
+  word-wrap: break-word;
 }
 
 #companyText {
@@ -234,7 +243,7 @@ textarea {
 
 .products2Container img {
   height: 20rem;
-  width: 20rem;
+  max-width: 20rem;
   /* border: 4px solid;
   border-color: rgba(0, 0, 0, 0.555); */
   box-shadow: 0 5px 5px 1px black;
@@ -466,6 +475,14 @@ textarea {
 
 #activate {}
 
+
+@media (max-width: 400px) {
+  #Navbar ul {
+    font-size: 1.2rem;
+    transform: translateY(-0.5rem);
+  }
+}
+
 @media (max-width: 700px) {
 
 
@@ -491,18 +508,9 @@ textarea {
     grid-column: span 1;
   }
 
-  #mobileNavbar {
-    display: flex;
-  }
-
-  #mobileNavbar ul {
-    flex-direction: column;
-    text-align: left;
-    padding-left: 1px;
-  }
 
   #desktopNavbar {
-    display: none;
+    /* display: none; */
   }
 
   .productsTitle {
@@ -516,7 +524,7 @@ textarea {
   }
 
   .mobileIcon {
-    display: flex;
+    /* display: flex; */
   }
 
   .spanTwo h1 {
